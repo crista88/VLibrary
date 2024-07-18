@@ -149,5 +149,9 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER')
 
-SUCCESS_URL = 'http://localhost:8000/success/'  # URL-ul unde utilizatorul este redirecționat după o plată reușită
-CANCEL_URL = 'http://localhost:8000/cancel/'    # URL-ul unde utilizatorul este redirecționat după anularea plății
+
+# Definirea domeniului
+DOMAIN_NAME = 'vlibrary.pro'
+
+SUCCESS_URL = f'https://{DOMAIN_NAME}/success/'
+CANCEL_URL = f'https://{DOMAIN_NAME}/cancel/'

@@ -38,6 +38,9 @@ class StripePaymentProcessor(PaymentProcessor):
             success_url=success_url,
             cancel_url=cancel_url,
             customer_email=customer_email,
+            discounts=[{
+                'coupon': 'Q2YFF7gn'
+            }]
         )
         return session
 

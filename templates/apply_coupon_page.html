@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply Coupon</title>
+</head>
+<body>
+    <h2>Apply Coupon</h2>
+    <form method="post" action="{% url 'apply_coupon' %}">
+        {% csrf_token %}
+        <label for="coupon_code">Coupon Code:</label>
+        <input type="text" id="coupon_code" name="coupon_code" required>
+        <button type="submit">Apply Coupon</button>
+    </form>
+</body>
+</html>
