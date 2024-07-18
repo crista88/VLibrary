@@ -1,0 +1,521 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLibrary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/gradient.css' %}">
+    <style>
+        /* Stiluri CSS suplimentare */
+        body {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .card {
+            min-height: 100%;
+        }
+
+        .card-img-top {
+            height: 200px; /* Ajustează înălțimea imaginilor */
+            object-fit: cover; /* Asigură că imaginile sunt proporționale */
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- Title -->
+<section id="title" class="gradient-background">
+
+    <nav class="navbar bg-dark border-bottom border-body justify-content-center" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">VLibrary</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href='#features'>Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#cat">Video Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <div class="container col-xxl-8 px-4 pt-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="{% static 'images/library.jpg' %}" class="d-block mx-lg-auto img-fluid rounded-circle"
+                     alt="Bootstrap Themes"
+                     style="max-width: 500px; height: auto; margin-bottom: 20px; margin-top: 10px;" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Unlock Your Potential with Our Comprehensive
+                    Course Library!</h1>
+                <p>Are you ready to take your skills to the next level? Dive into our extensive library of over 1000
+                    courses covering digital marketing, cryptocurrency, finance, diet and fitness, self-development,
+                    and more. Whether you're looking to enhance your knowledge for personal growth or explore
+                    opportunities for resale, our carefully curated collection has something for everyone.
+                    Discover new skills, stay ahead of the curve, and invest in your future success today.</p>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                    <button type="button" class="btn btn-outline-dark btn-lg px-4"><a class="nav-link" href="#cat">
+                        Check available Video Categories!</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Features -->
+<section id="features">
+    <div class="container mt-5">
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="col d-flex align-items-start">
+                <div
+                        class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-check2-circle"
+                         viewBox="0 0 16 16">
+                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="fs-2">Unlimited Access to Premium Content.</h3>
+                    <p>Gain lifetime access to over 1000 high-quality video courses covering various topics like digital
+                        marketing, cryptocurrency, fitness, and more. Unlock your potential with unlimited learning
+                        opportunities!</p>
+
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                        class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-mortarboard"
+                         viewBox="0 0 16 16">
+                        <path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917l-7.5-3.5ZM8 8.46 1.758 5.965 8 3.052l6.242 2.913L8 8.46Z"/>
+                        <path d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466 4.176 9.032Zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46l-3.892-1.556Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="fs-2">Resell Rights Included.</h3>
+                    <p>Unlock the door to entrepreneurship! With our Professional and Master packages, get resell rights
+                        for our video courses and step-by-step guidance to start your online business. Monetize your
+                        knowledge and create passive income streams.</p>
+
+                </div>
+            </div>
+            <div class="col d-flex align-items-start">
+                <div
+                        class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor"
+                         class="bi bi-arrow-through-heart"
+                         viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="fs-2">Stay Ahead of the Curve with AI-Powered Tools.</h3>
+                    <p>Access over 1000 courses across 10+ categories and supercharge your skills with 50+ AI-driven
+                        tools exclusively available in the Master package. Be at the forefront of digital innovation
+                        and take your expertise to the next level!</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gradient-background">
+    <div class="container-fluid">
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis">Available video courses categories</h1>
+            <p>Explore over 1000 video courses across 10+ diverse categories, carefully curated to fuel your growth and
+                success. From mastering digital marketing to diving into the world of cryptocurrency and beyond,
+                VLibrary offers comprehensive learning opportunities to suit every interest and skill level. Choose
+                us for unparalleled access to knowledge, expert-led courses, and a pathway to unlocking your full
+                potential!</p>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- categories -->
+<section id="cat">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/crypto.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cryptocurrency Mastery: Unlock the Future of Finance</h5>
+                        <p class="card-text">Dive into our comprehensive Cryptocurrency video courses and gain the 
+                            knowledge you need to succeed in the fast-paced world of digital currencies. Whether you're
+                            looking to enhance your personal understanding of blockchain technology and cryptocurrency
+                            trading, or you're eager to start a profitable online business by reselling our high-quality
+                            content, our courses are designed to meet your needs. With step-by-step tutorials, expert 
+                            insights, and actionable strategies, you'll be equipped to navigate and thrive in the
+                            cryptocurrency market. Invest in your future today and become a part of the financial revolution!.
+                        Check some titles from our collection:</p>
+                        <ul>
+                            <li>Bitcoin-profit secrets</li>
+                            <li>Buy-sell using Bitcoin</li>
+                            <li>Cryptocurrency secrets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/trade.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Master the Art of Trading: Your Path to Financial Freedom</h5>
+                        <p class="card-text">Our comprehensive Trading video courses are your gateway to mastering the
+                            stock market, forex, and other trading arenas. Designed for both self-learners and aspiring
+                            entrepreneurs, these courses provide you with in-depth knowledge, proven strategies, and 
+                            expert insights to help you succeed. Whether you aim to enhance your personal trading skills
+                            or build a profitable online business by reselling our premium content, you'll find 
+                            everything you need right here. Learn the secrets of successful traders, stay ahead of 
+                            market trends, and achieve financial freedom with our expertly curated trading courses. 
+                            Invest in your success today and start your journey towards becoming a trading pro!
+                        Check some titles from our collection:</p>
+                        <ul>
+                            <li>10K Trading Blueprint</li>
+                            <li>6 figure trading strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/diet.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Transform Your Life: Fitness and Diet Video Courses</h5>
+                        <p class="card-text">Unlock the secrets to a healthier, fitter you with our Fitness and Diet 
+                            video courses. Whether you're looking to improve your personal wellness or launch a thriving
+                            online business, our expertly crafted courses cover everything from nutrition basics to
+                            advanced fitness regimes. Designed for self-learners and entrepreneurs alike, these courses 
+                            provide actionable insights, effective workout plans, and comprehensive dietary guidance. 
+                            Start your journey to better health, inspire others, and tap into the growing fitness market
+                            by reselling our premium content. Achieve your fitness goals and build a successful 
+                            business with our top-tier Fitness and Diet courses. Invest in your health and future today!
+                        Check some titles from our collection:</p>
+                        <ul>
+                            <li>Fat burn secrets</li>
+                            <li>Bulletproof Keto Diet</li>
+                            <li>Living Paleo step by step</li>
+                            <li>All about intermittent fasting</li>
+                            <li>Vegan warrior</li>
+                            <li>Future of fitness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/books.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Maximize Your Earnings: Affiliate Marketing Video Courses</h5>
+                        <p class="card-text">Dive into the world of affiliate marketing with our comprehensive video 
+                            courses, designed to help you master this lucrative online business model. Whether you're
+                            a self-learner eager to boost your income or an entrepreneur looking to expand your business
+                            , our courses cover everything from beginner basics to advanced strategies. Learn how to 
+                            effectively promote products, optimize your campaigns, and maximize your earnings. 
+                            With insights from industry experts and real-world examples, you'll gain the skills needed 
+                            to succeed in affiliate marketing. Empower yourself with the knowledge to create a 
+                            profitable online business and generate passive income. Invest in your financial future and 
+                            start your affiliate marketing journey today!.
+                        Check some titles from our collection:</p>
+                        <ul>
+                            <li>High Ticket sales secret</li>
+                            <li>Modern Affiliate Marketing</li>
+                            <li>Digital Marketing for seniors</li>
+                            <li>How to convert</li>
+                            <li>Sales Funnels-optimizations and strategies</li>
+                            <li>Digital marketing TOOLKIT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/social.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Transform Your Influence: Social Media Video Courses</h5>
+                        <p class="card-text">Unlock the power of social media with our expertly curated video courses, 
+                            perfect for those looking to elevate their personal brand or build a thriving online
+                            business. Whether you're a self-learner aiming to boost your social media skills or an 
+                            entrepreneur ready to harness the full potential of digital platforms, our courses provide 
+                            comprehensive insights and strategies. Learn how to create engaging content, grow your 
+                            following, and drive traffic to your website. With tips from top influencers and real-world
+                            case studies, you'll gain the expertise needed to succeed in the dynamic world of social
+                            media. Empower yourself with the knowledge to become a social media pro and watch your 
+                            influence soar. Invest in your future and start your social media mastery journey today!
+                            Check some titles from our collection:</p>
+                        <ul>
+                            <li>Instagram ads for success</li>
+                            <li>Modern Twitter</li>
+                            <li>Modern Facebook playbook</li>
+                            <li>Social Media TOOLKIT</li>
+                            <li>Influencer secrets</li>
+                            <li>Video marketing-profit kit </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/ai.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Master the Future: AI Tech Video Courses</h5>
+                        <p class="card-text">Dive into the revolutionary world of artificial intelligence with our 
+                            cutting-edge AI Tech video courses. Perfect for self-learners and entrepreneurs alike, 
+                            these courses will equip you with the knowledge and skills to stay ahead in a rapidly 
+                            evolving tech landscape. Learn the fundamentals of AI, explore advanced machine learning 
+                            techniques, and discover how to apply AI solutions to real-world problems. Whether you're 
+                            looking to enhance your career prospects or develop innovative AI-driven products and
+                            services, our comprehensive courses offer invaluable insights and practical expertise.
+                            Embrace the future of technology and position yourself at the forefront of AI advancements.
+                            Invest in your growth and unlock unlimited potential with our AI Tech courses today!
+                            Check some titles from our collection:</p>
+                        <ul>
+                            <li>ChatGpt Prompt Generator</li>
+                            <li>AI in Digital Marketing</li>
+                            <li>How to sell AI Art Video</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/cyber_sale.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Unlock Your Potential: Online Business Video Courses</h5>
+                        <p class="card-text">Transform your entrepreneurial dreams into reality with our comprehensive 
+                            Online Business video courses. Designed for both self-learners and aspiring entrepreneurs, 
+                            these courses cover everything you need to know to start and grow a successful online 
+                            business. From e-commerce strategies and digital marketing to business planning and 
+                            financial management, our expert-led courses provide practical knowledge and actionable 
+                            insights. Learn how to identify profitable niches, build an engaging online presence,
+                            and leverage digital tools to maximize your reach and revenue. Whether you're looking to 
+                            launch a new venture or scale an existing one, our Online Business courses offer the skills
+                            and strategies to succeed. Invest in your future and turn your online business aspirations 
+                            into achievements today! Check some titles from our collection:</p>
+                        <ul>
+                            <li>Amazon playbook for success</li>
+                            <li>ClickBank marketing secrets</li>
+                            <li>Start your online coaching business</li>
+                            <li>Earn with Udemy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="{% static 'images/keys.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Elevate Your Life: Personal Improvement & Self-Development Video Courses</h5>
+                        <p class="card-text">Unlock your true potential with our extensive Personal Improvement and 
+                            Self-Development video courses. Perfect for those seeking to enhance their personal and
+                            professional lives, these courses cover a wide range of topics from time management and 
+                            goal setting to emotional intelligence and leadership skills. Our expert instructors provide
+                            practical tips and proven strategies to help you build confidence, improve productivity,
+                            and achieve your personal goals. Whether you’re looking to boost your career, improve your
+                            relationships, or simply become the best version of yourself, our Self-Development courses
+                            offer the tools and insights you need. Invest in your growth and start your journey towards
+                            a more fulfilling and successful life today! Check some title from our collection:</p>
+                        <ul>
+                            <li>365 manifestation power</li>
+                            <li>Master your destiny</li>
+                            <li>Mindset Reset</li>
+                            <li>Meditation for busy people</li>
+                            <li>Speak with confidence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<!-- Pricing -->
+<section class="gradient-background">
+    <div class="container-fluid">
+        <div class="px-4 py-5 my-5 text-center">
+            <h1 class="display-5 fw-bold text-body-emphasis">A plan for every need</h1>
+            <p class="fs-5 text-body-secondary">Simple and affordable price plans, with lifetime access.
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Whether you're investing in personal development or starting an online business,
+                    success is guaranteed with VLibrary!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Individual</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">FREE<small
+                                class="text-body-secondary fw-light"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Lifetime access</li>
+                            <li>1000+ video courses</li>
+                            <li>10+ categories to choose from, for personal development</li>
+                            <li>After purchase, you will get on your email, direct access to our Google Drive, for the
+                                collection.
+                            </li>
+                        </ul>
+                        <a href="{% url 'checkout' %}?package_type=individual_use" class="w-100 btn btn-lg btn-outline-dark">Choose Individual</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Professional</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$9.99<small
+                                class="text-body-secondary fw-light"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+
+                            <li>Lifetime access</li>
+                            <li>1000+ video courses, 10+ categories</li>
+                            <li>Resell licence for any of the videos.</li>
+                            <li>Step-by-step guide to start your online business.</li>
+                            <li>24 hours support.</li>
+                        </ul>
+                        <a href="{% url 'checkout' %}?package_type=professional_use" class="w-100 btn btn-lg btn-dark">Choose Professional</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-dark">
+                    <div class="card-header py-3 text-bg-dark border-dark">
+                        <h4 class="my-0 fw-normal">Master</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">$14.99<small
+                                class="text-body-secondary fw-light"></small></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Lifetime access</li>
+                            <li>1000+ video courses, 10+ categories</li>
+                            <li>Resell licence + Step-by-step guide to start your online business.</li>
+                            <li>AI FREE Tools to become a Master of Digital Marketing.</li>
+                        </ul>
+                        <a href="{% url 'checkout' %}?package_type=master_use" class="w-100 btn btn-lg btn-dark">Choose Master</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gradient-background">
+    <div class="container-fluid">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="col-lg-6 p-3 p-lg-5 pt-lg-3">
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Today, Individual Package for FREE, plus exclusive bonuses for extra value!</h1>
+                <p>Individual Use FREE: Just, if you want, donate 1$ to help us keep the ads on so this platform can continue to offer free courses to 
+                    as many people as possible. Your support ensures that everyone has access to valuable learning resources, helping us reach and 
+                    educate a broader audience. If you enjoy the quality of our video courses and want to earn extra income as a reseller, you can 
+                    benefit from a 50% discount on our Professional and Master plans. Every dollar counts and contributes to maintaining and expanding 
+                    our educational offerings. Thank you for your generosity!</p>
+                <p class="lead">Join us today and get even more tools for success.Don’t miss out—act now and take advantage 
+                    of this FREE EXTRA BONUSES to elevate your skills and knowledge. Check what you will get:</p>
+                <ul>
+                    <li>ChatGpt Video Courses</li>
+                    <li>ChatGpt Prompt Generator</li>
+                    <li>ChatGpt Expertise UPGRADE Pack</li>
+                    <li>Make Money with AI Art Video</li>
+                    <li>Cryptocurrency Secrets</li>
+                    <li>AI Human Reels</li>
+                    <li>10 Business & Marketing Video Courses</li>
+                </ul>
+            </div>
+            <div class="col-lg-5 p-0 overflow-hidden shadow-lg ms-lg-4">
+                <img class="rounded-lg-3" src="{% static 'images/success.jpg' %}" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gradient-background">
+    <div class="container-fluid">
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis">100% satisfaction guarantee</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">At VLibrary, we're so confident in the quality and diversity of our courses that we
+                    offer a
+                    100% satisfaction guarantee. If you're not completely satisfied, we'll refund your money, no
+                    questions asked!
+                    We believe our vast range of information across different fields satisfies even the most discerning
+                    users.
+                    With over 1000 video courses, we provide not only personal development opportunities but also over
+                    500 detailed
+                    ideas for online businesses. Invest in your future with VLibrary today!</p>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+                <div class="container px-5">
+                    <img src="{% static 'images/go.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4"
+                         alt="Example image" width="700" height="500" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<section id="contact" class="gradient-background">
+    <div class="container ">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#title" class="nav-link px-2 text-body-secondary">About Us</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#cat" class="nav-link px-2 text-body-secondary">Video categories</a></li>
+                <li class="nav-item"><a href="#pricing" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 VLibrary</p>
+        </footer>
+    </div>
+</section>
+</body>
+
+</html>

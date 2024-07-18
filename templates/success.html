@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2 class="mb-4">Payment Successful</h2>
+            <p class="lead">Thank you for your purchase!</p>
+            <p>Your access details will be sent to your email.</p>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="email">Confirm your email to receive the files:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
